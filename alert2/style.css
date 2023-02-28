@@ -1,0 +1,158 @@
+:root {
+  --color-success: green;
+  --color-error: red;
+  --color-background-success: rgba(13, 242, 13, 0.078);
+  --color-background-error: rgba(248, 17, 17, 0.092);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#toast {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 1000;
+  animation: slideshow 0.5s ease, fadeOut 1s 3s linear forwards;
+  /* forwards: chạy xong animation là dừng */
+  transition: all linear 0.3s;
+}
+
+.toast {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  min-width: 375px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 20px;
+  border-left: 4px solid;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  /* transform: translateX(100%); */
+  /* animation: slideshow 0.5s ease, fadeOut 1s 3s linear forwards; */
+  /* forwards: chạy xong animation là dừng */
+  /* transition: all linear 0.3s; */
+  overflow: hidden;
+}
+
+/* animation */
+
+/*! trượt từ trái vào */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*! Trượt có quán tính */
+@keyframes slideshow {
+  0% {
+    transform: translateX(100%);
+  }
+
+  /* 25% {
+    transform: translateX(-10%);
+  } */
+
+  50% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0%);
+    display: none !important;
+  }
+}
+
+/*! mờ đi */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+/* animation */
+
+.toast + .toast {
+  margin-top: 24px;
+}
+
+.toast__icon {
+  font-size: 24px;
+}
+
+.toast__body {
+  flex-grow: 1;
+}
+
+.toast__close {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.toast__icon,
+.toast__close {
+  padding: 0 14px;
+}
+
+.toast__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+.toast__msg {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: ;
+  color: #333;
+  line-height: 1.5;
+}
+
+.toast--success {
+  border-color: green;
+  background-color: var(--color-background-success);
+}
+
+.toast--success .toast__icon {
+  color: green;
+}
+
+.toast--error .toast__icon {
+  color: red;
+}
+
+.toast--error {
+  /* border-bottom: 4px solid red; */
+  border-color: red;
+  background-color: var(--color-background-error);
+}
+
+.countdown {
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  animation: count-down 4s ease forwards;
+}
+
+/* -- animation for count-down --- */
+
+@keyframes count-down {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 00%;
+    display: none;
+  }
+}
