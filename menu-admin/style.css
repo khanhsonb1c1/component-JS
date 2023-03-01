@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+
+}
+
+:root {
+    --aside-color: #17118d;
+}
+
+.aside {
+    height: 100vh;
+    background-color: var(--aside-color);
+    width: 200px;
+}
+
+.aside {
+    color: white;
+    cursor: pointer;
+}
+
+.aside__header {
+    padding: 20px 0px;
+    /* font-size: 24px; */
+    text-align: center;
+
+}
+
+.aside__body {
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.aside__body .aside__body-item {
+    padding: 15px 0px 15px 20px;
+    border-radius: 14px 0 0 14px;
+    position: relative;
+}
+
+/* tao hieu ung bo tron 2 goc */
+
+ .active::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--aside-color);
+    position: absolute;
+    top:0;
+    right: 0;
+    border-radius: 50%;
+    transform: translateY(-100%);
+    box-shadow: 10px 10px  0 0 white;
+}
+
+ .active::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--aside-color);
+    position: absolute;
+    bottom:0;
+    right: 0;
+    border-radius: 50%;
+    transform: translateY(100%);
+    box-shadow: 10px -10px 0 0 white;
+}
+
+.aside__body .aside__body-item  i {
+    margin-right: 20px;
+}
+
+/* .aside__body li:hover {
+    background-color: white;
+    color: #333;
+} */
+
+.active{
+    background-color: white;
+    color: var(--aside-color);  
+    font-size: 1.2em;
+}
