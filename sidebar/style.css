@@ -1,0 +1,70 @@
+body{
+    background-color: #34495e;
+    margin: 0;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.menu-btn{
+    background-color: deepskyblue;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    position: fixed;
+    top: 26px;
+    left: 25px;
+}
+
+.menu{
+    bottom: 0;
+    background-color: white;
+    left: 0;
+    margin: 0;
+    padding: 32px;
+    position: fixed;
+    top: 0;
+    width: 288px;
+    transform: translate3d(-100%, 0 , 0);
+    transition: transform 0.2s linear ;
+}
+
+.menu-btn li {
+    background-color: white;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 16px;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn li:first-child{
+    transform: translate3d(0, -4px,0);
+}
+.menu-btn li:last-child{
+    transform: translate3d(0, 4px,0);
+}
+
+
+.menu-btn--on li:first-child{
+    transform: rotate(135deg) translate(0, 0, 0);
+}
+.menu-btn--on li:last-child{
+    transform: rotate(-135deg) translate(0, 0, 0);
+}
+
+.menu-btn--on li:nth-child(2){
+    opacity: 0;
+}
+
+.menu--open{
+    transform: translate3d(0,0,0);
+}
