@@ -38,19 +38,6 @@
 }
 
 /* animation */
-
-/*! trượt từ trái vào */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 /*! Trượt có quán tính */
 @keyframes slideshow {
   0% {
@@ -110,7 +97,6 @@
 .toast__msg {
   font-size: 14px;
   font-weight: 400;
-  margin-top: ;
   color: #333;
   line-height: 1.5;
 }
