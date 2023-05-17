@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+
 :root {
   --primary-color: #4daf54;
 }
@@ -11,6 +13,7 @@
 .body {
   height: 100vh;
   background: linear-gradient(to right, #4daf54, #3d8880);
+  font-family: 'Rubik Pixels', cursive;
 }
 
 .card {

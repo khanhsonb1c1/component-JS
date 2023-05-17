@@ -20,7 +20,7 @@ function toast({ title, message, type }) {
         </div>
 
         <div class="toast__body">
-            <h3 class="toast__title">${title}</h3>
+            <h3 class="toast__title text-truncate-2">${title}</h3>
             <p class="toast__msg">${message} </p>                    
         </div>
         <div class="toast__close">
@@ -32,6 +32,13 @@ function toast({ title, message, type }) {
     main.appendChild(toast);
     // đưa thằng toast vào trong thằng main tạo ở trên đầu
     // (element có id = toast)
+
+    // const list = document.querySelectorAll(".toast");
+
+    // if (list.length == 4) {
+    //   list[0].classList.add("hidden");
+    // } else {
+    // }
 
     const autoRemoveId = setTimeout(() => {
       main.removeChild(toast);
