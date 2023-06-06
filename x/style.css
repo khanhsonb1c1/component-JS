@@ -1,0 +1,47 @@
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: relative;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2c394f;
+    width: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .node {
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    background: #2c394f;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+  }
+  .node:hover .menu {
+    display: block;
+  }
+  .node:hover {
+    background: #233e6b;
+  }
+  p {
+    margin: 0;
+  }

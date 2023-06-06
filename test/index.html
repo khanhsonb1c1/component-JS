@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>vl</div>
+    <script>
+      const countPairs = (arr, l, r) => {
+        arr.sort(); // Sort the array in ascending order
+        const n = arr.length;
+        let count = 0;
+
+        let left = 0; // Pointer starting from the left end of the array
+        let right = 1; // Pointer starting from the next element after left
+
+        while (left < n - 1) {
+          const sum = arr[left] + arr[right];
+
+          if (sum >= l && sum <= r) {
+            count += n - right; // All pairs (arr[left], arr[j]) where left < j <= n are valid
+            right++;
+          } else if (sum < l || right === n - 1) {
+            left++;
+            right = left + 1;
+          } else {
+            right++;
+          }
+        }
+        console.log(count)
+        return count;
+        // const n = arr.length;
+        // let count = 0;
+
+        // for (let i = 0; i < n; i++) {
+        //   for (let j = i + 1; j < n; j++) {
+        //     const sum = arr[i] + arr[j];
+        //     if (sum >= l && sum <= r) {
+        //       count++;
+        //     }
+        //   }
+        // }
+        // console.log(count);
+        // return count;
+
+        // arr.sort((a, b) => a - b); // Sort the array in ascending order
+        // const n = arr.length;
+        // let count = 0;
+
+        // let left = 0; // Pointer starting from the left end of the array
+        // let right = 1; // Pointer starting from the next element after left
+
+        // while (left < n - 1) {
+        //   const sum = arr[left] + arr[right];
+
+        //   if (sum >= l && sum <= r) {
+        //     count += n - right; // All pairs (arr[left], arr[j]) where left < j <= n are valid
+        //     right++;
+        //   } else if (sum < l || right === n - 1) {
+        //     left++;
+        //     right = left + 1;
+        //   } else {
+        //     right++;
+        //   }
+        // }
+        // console.log(count);
+        // return count;
+      };
+
+      //  const arr = [3, 6, 2, 3, 7, 10];
+
+      const arr = [2, 3, 4, 5]; // output 4
+
+      countPairs(arr, 5, 7);
+
+    </script>
+  </body>
+</html>
